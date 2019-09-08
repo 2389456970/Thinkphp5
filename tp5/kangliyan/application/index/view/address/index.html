@@ -1,0 +1,449 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>收货地址</title>
+
+    <link rel="stylesheet" href="__STATIC__/home/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/comon.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/style.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/address.css"/>
+
+    <script type="text/javascript" src="__STATIC__/home/js/jquery-1.11.0.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/bootstrap.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/address.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/angular.min.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/pro_details.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/quit.js" ></script>
+
+</head>
+
+<body>
+
+<!--header-->
+
+<div class="header">
+
+    <div class="header-top">
+
+        <div class="mg">
+
+            <h1 class="pull-left"><a href="{:url('Index/index')}">欢迎来到康丽妍!</a></h1>
+
+            <a href="{:url('Login/index')}" class="login pull-left"><i>请登录</i> <span>|</span></a>
+
+            <a href="{:url('Register/index')}" class=" regist"> 免费注册</a>
+
+            <a href="{:url('Login/index')}" class="quit"><span>|</span> 安全退出</a>
+
+            <ul class="  pull-right">
+
+                <li>
+
+                    <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                    <dl>
+
+                        <dd>
+
+                            <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                        </dd>
+
+                    </dl>
+
+                </li>
+
+                <li><a href="{:url('User/index')}">会员中心</a></li>
+
+                <li><a href="###">企业采购</a></li>
+
+                <li>
+
+                    <a href="###">客户服务</a>
+
+                    <dl>
+
+                        <dd>
+
+                            <a href="###">客户服务</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="###">客户服务</a>
+
+                        </dd>
+
+                    </dl>
+
+                </li>
+
+                <li>
+
+                    <a href="###">网站导航</a>
+
+                    <dl>
+
+                        <dd>
+
+
+
+                            <a href="###">网站导航</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="###">网站导航</a>
+
+                        </dd>
+
+                    </dl>
+
+
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div><!--header_top end-->
+
+    <div class="mg">
+
+        <div class="header_content">
+
+            <div class="logo">
+
+                <a href="{:url('Index/index')}"><img src="__STATIC__/home/img/logo_03.png"></a>
+
+            </div>
+
+            <div class="search">
+
+                <input type="text"placeholder="输入商品关键词搜索">
+
+                <a href="###" class="search_text">搜索</a>
+
+                <ul>
+
+                    <li><a href="{:url('Shoplist/index')}">男士家居服</a></li>
+
+                    <li><a href="{:url('Shoplist/index')}">儿童家居服</a></li>
+
+                    <li><a href="{:url('Shoplist/index')}">休闲家居服</a></li>
+
+                    <li><a href="{:url('Shoplist/index')}">运动家居服</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="shop_car pull-left">
+
+                <a href="{:url('Shopcart/index')}">
+
+                    购物车
+
+                    <span class="badge ">0</span>
+
+                </a>
+
+
+
+            </div>
+
+        </div>
+
+    </div><!--mg end-->
+
+    <div class="nav">
+
+        <ul>
+
+            <li ><a href="{:url('Index/index')}" class="active">首页</a></li>
+
+            <li class="on">
+
+                <a href="{:url('Index/index')}" class="active">账户设置 <span class="glyphicon glyphicon-menu-down"></span></a>
+
+                <dl>
+
+                    <dd><a href="###">账户设置</a></dd>
+
+                    <dd><a href="###">账户设置</a></dd>
+
+                </dl>
+
+            </li>
+
+            <li ><a href="{:url('Index/index')}" class="active">社区<span class="glyphicon glyphicon-menu-down"></span></a>
+
+                <dl>
+
+                    <dd><a href="###">社区</a></dd>
+
+                    <dd><a href="###">社区</a></dd>
+
+                </dl>
+
+            </li>
+
+            <li><a href="{:url('Index/index')}" class="active">消息</a></li>
+
+        </ul>
+
+    </div><!--nav end-->
+
+</div><!--hearer end-->
+
+<div class="content">
+
+    <div class="mg">
+
+        <div class="left">
+
+            <h1>设置</h1>
+
+            <ul>
+
+                <li><a href="###">个人信息</a></li>
+
+                <li><a href="###">账户安全</a></li>
+
+                <li><a href="###">账号绑定</a></li>
+
+                <li><a href="{:url('Address/index')}">收货地址</a></li>
+
+                <li><a href="###">消费记录</a></li>
+
+                <li><a href="###">快捷支付</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="right">
+
+            <h1 id="appear">新增收货地址</h1>
+
+            <p class="old_bulid">您已创建<i id="coun_add">1</i>个收货地址，最多可创建<i id="coun_sub">20</i>个</p>
+            {foreach name="addr" item="vo"}
+            <div class="addr_text" id="addres_text">
+
+                <h2>公司 </h2>
+
+                <p  class="remove" >x</p >
+
+                <ul id="addres_details">
+
+                    <li><strong>收货人：&nbsp;</strong>{$vo.address_name}</li>
+
+                    <li><strong>地址: &nbsp;</strong>{$vo.address}</li>
+
+                    <li><strong>手机： &nbsp;</strong>{$vo.address_mobile}</li>
+
+                    <li><strong>邮编：&nbsp;</strong>{$vo.zip_code}</li>
+
+                    <li><strong>电子邮箱：&nbsp;</strong>{$vo.address_mail}</li>
+
+                </ul>
+
+                <div class="tip" id="tip">
+
+                    <a href="###">设为默认</a>
+
+                    <a href="###">使用一键购 </a>
+
+                    <a href="###">编辑 </a>
+
+                </div>
+
+            </div>
+            {/foreach}
+
+            <div class="bulid_adr">
+
+                <h1>新增收货人信息<span id="close_adr">x</span></h1>
+
+                <label>
+
+                    <span><i>*</i>收货人：</span>
+
+                    <input type="text" id="userName" onblur="checkUser(this.value)">
+
+                    <div class="warning" id="nameTip">
+
+                        ! 请输入收货人姓名
+
+                    </div>
+
+                </label>
+
+                <label>
+
+
+
+                    <span><i>*</i>详细地址：</span>
+
+                    <input type="text" id="address" onblur="checkAddr(this.value)">
+
+                    <div class="warning" id="addTip">
+
+                        ! 请输入详细地址
+
+                    </div>
+
+                </label>
+
+                <label>
+
+
+
+                    <span><i>*</i>手机号码：</span>
+
+                    <input type="text" onblur="checkPhone(this.value)" id="phone">
+
+                    <div class="warning" id="phoneTip" >
+
+                        ! 手机号有误
+
+                    </div>
+
+                </label>
+
+                <label>
+
+                    <span>邮编：</span>
+
+                    <input type="text" id="telephone">
+
+                </label>
+
+                <label>
+
+                    <span>邮箱：</span>
+
+                    <input type="text" onblur="checkEmail(this.value)" id="email">
+
+                    <div class="warning" id="emailsTip">
+
+                        ! 邮箱有误
+
+                    </div>
+
+                    <i>用来接收订单提醒邮件，便于您及时了解订单状态</i>
+
+                </label>
+
+                <a href="####" class="btn" onclick="addpost()">
+
+                    保存收货人信息
+
+                </a>
+
+            </div><!--bulid_adre-->
+
+        </div>
+
+    </div>
+
+    <div class="comfir">
+
+        <div class="mg">
+
+            <ul>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_01.png">
+
+                    100%正品保证
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_02.png">
+
+                    新人首单免邮
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_03.png">
+
+                    7天无理由退换货
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_04.png">
+
+                    首次退换货免邮
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+</div><!--content end-->
+<script>
+    function addpost(){
+        // alert(1);
+        var data = {
+            'address_name':$('#userName').val(),
+            'address':$('#address').val(),
+            'address_mobile':$('#phone').val(),
+            'zip_code':$('#telephone').val(),
+            'address_mail':$('#email').val(),
+        }
+        console.log(data)
+        $.ajax({
+            type:'post',
+            url:"{:url('Address/add')}",
+            data:data,
+            dataType:'json',
+            success:function(data){
+                if (data.code==1) {
+                    alert(data.mgs);
+                    window.location.href="{:url('Address/index')}";
+                }else if(data.code==2){
+                    alert(data.mgs);
+                }
+            }
+        })
+
+    }
+</script>
+{include file="public/footer"}
+
+

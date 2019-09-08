@@ -1,0 +1,12 @@
+{volist name="nav" id="vo"}
+<dl id="menu-article">
+    <dt><i class="Hui-iconfont">&#xe616;</i> {$vo.nav_name}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+    <dd>
+        <ul>
+            {volist name="vo['next']" id="so"}
+            <li><a data-href="{:url($so['url_path'])}" data-title="{$so.nav_name}" href="javascript:void(0)">{$so.nav_name}</a></li>
+            {/volist}
+        </ul>
+    </dd>
+</dl>
+{/volist}

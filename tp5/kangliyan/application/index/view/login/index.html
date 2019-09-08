@@ -1,0 +1,240 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>登录</title>
+
+    <link rel="stylesheet" href="__STATIC__/home/css/style.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/login.css">
+
+    <script type="text/javascript" src="__STATIC__/home/js/jquery-1.11.0.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/login.js" ></script>
+
+</head>
+
+<body onload="loadstroage()">
+
+<div class="header">
+
+    <div class="mg">
+
+        <a href="index.html"><img src="__STATIC__/home/img/logo_03.png" alt="图片无法加载"></a>
+
+        <a href="{:url('Index/index')}" class="back">返回首页 ></a>
+
+    </div>
+
+</div>
+
+<div class="content">
+
+    <div class="login">
+
+        <div class="mg">
+
+            <form method="post">
+
+                <ul class="way">
+
+                    <li >
+
+                        <h1>
+
+                            扫码登录
+
+                            <span>|</span>
+
+                        </h1>
+
+                    </li>
+
+                    <li class="on">
+
+                        <h1>
+
+                            账号登录
+
+                        </h1>
+
+                    </li>
+
+                </ul>
+
+                <div class="text">
+
+                    <ul>
+
+                        <li>
+
+                            <img src="__STATIC__/home/img/weixin.png">
+
+                        </li>
+
+                        <li class="on">
+
+                            <h1>
+
+                                公共场所不建议自动登录，以防账户丢失
+
+                            </h1>
+
+                            <label class="ipt">
+                                <div class="tip">
+                                    <p id="userNameTip">
+                                        *你输入的帐号或密码不正确，请重新输入！
+                                    </p>
+                                </div>
+
+                                <span><img src="__STATIC__/home/img/login_u_03.png"></span>
+
+                                <input type="text" id="name" placeholder="邮箱/用户名/已验证手机" name="username">
+
+                            </label>
+
+                            <label class="ipt">
+
+                                <span><img src="__STATIC__/home/img/login_p_03.png"></span>
+                                <input type="password" id="password" placeholder="密码" name="password">
+
+                            </label>
+                            <label class="ipt">
+                                <div class="tip">
+                                    <p id="errorcode" style="font-size: 18px;left:20px;top: -8px;">
+                                        验证码错误
+                                    </p>
+                                </div>
+                                <span class="code">验证码：</span>
+
+                                <input type="text" id="yan" placeholder="请输入验证码" style="width: 110px" name="code">
+                                <img style="cursor:pointer" src="{:url('Login/verify')}" onclick="this.src=this.src+'?time='+Math.random()" id="verify" width="145" height="50" />
+                                <span style="float: right;line-height: 50px;cursor: pointer;" onclick="fun()">换一张</span>
+                            </label>
+
+                            <label class="c-checkbox">
+
+                                <input type="checkbox" id="IsautoCheck" class="check" >
+
+                                <span></span>
+
+                                <i>自动登陆 </i>
+
+                            </label>
+
+                            <a href="###">忘记密码</a>
+
+                            <a class="btn" href="javascript:;" onclick="put()">登录</a>
+
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom">
+
+                    <ul>
+
+                        <li><a href="###">微博</a></li>
+
+                        <li><a href="###">QQ</a></li>
+
+                        <li><a href="###">微信</a></li>
+
+                    </ul>
+
+                    <a href="{:url('Register/index')}" class="once">立即注册</a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div><!--content end-->
+
+<div class="footer">
+
+    <div class="mg">
+
+        <ul>
+
+            <li><a href="###">关于我们</a></li>
+
+            <li><a href="###">联系我们</a></li>
+
+            <li><a href="###">人才招聘</a></li>
+
+            <li><a href="###">商家入驻</a></li>
+
+            <li><a href="###">广告服务</a></li>
+
+            <li><a href="###">友情链接 </a></li>
+
+            <li><a href="###">销售联盟</a></li>
+
+            <li><a href="###">康丽妍社区 </a></li>
+
+            <li><a href="###">康丽妍公益</a></li>
+
+            <li><a href="###">English Site</a></li>
+
+        </ul>
+
+        <p>Copyright©2004-2016  康丽妍商城  版权所有</p>
+
+    </div>
+
+</div>
+
+</body>
+<script>
+    function fun() {
+              url = "{:url('Login/verify')}";
+              $('#verify').attr('src',url+"?time="+Math.random());}
+    function put(){
+        var url ="{:url('Login/addPost')}";
+        var data = {
+            "username":$('[name="username"]').val(),
+            "password":$('[name="password"]').val(),
+            "code":$('[name="code"]').val(),}
+        $.ajax({
+            type:'post',
+            url:url,
+            data:data,
+            dataType:'json',
+            success:function(data){
+                if (data.code==0) {
+                    alert(data.mgs)
+                    location.href=data.url;
+                }else if(data.code==1 || data.code==2){
+                    // var k = $("#name").val();
+                    // if (k=='') {
+                    //     $("#userNameTip").html('你还没有输入账号').show().delay(2000).fadeOut();
+                    //     return false;
+                    // }
+                    $("#userNameTip").show().delay(5000).fadeOut();
+                    $("#password").val("");
+                    url = "{:url('Login/verify')}";
+                    $('#verify').attr('src',url+"?time="+Math.random());
+                    $("#yan").val("");
+                }else{
+                    $("#errorcode").show().delay(4000).fadeOut();
+                }
+            }
+        })
+        return false;
+    }
+</script>
+</html>
+

@@ -1,0 +1,406 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>支付页面</title>
+
+		<link rel="stylesheet" href="__STATIC__/home/css/bootstrap.css" />
+
+		<link rel="stylesheet" href="__STATIC__/home/css/comon.css" />
+
+		<link rel="stylesheet" href="__STATIC__/home/css/style.css" />
+
+		<link rel="stylesheet" href="__STATIC__/home/css/pay.css"/>
+
+		<script type="text/javascript" src="__STATIC__/home/js/jquery-1.11.0.js" ></script>
+
+		<script type="text/javascript" src="__STATIC__/home/js/pay.js" ></script>
+
+		<script type="text/javascript" src="__STATIC__/home/js/quit.js" ></script>
+
+	</head>
+
+	<body>
+
+		<div class="header">
+
+			<div class="header-top">
+
+				<div class="mg">
+
+					<h1 class="pull-left"><a href="index.html">欢迎来到康丽妍!</a></h1>
+
+					<a href="login.html" class="login pull-left" id="login"><i>请登录</i> <span>|</span></a>
+
+					<a href="register.html" class=" regist"> 免费注册</a>
+
+					<a href="login.html" class="quit"><span>|</span> 安全退出</a>
+
+					<ul class="  pull-right">
+
+						<li>
+
+							<a href="order.html">我的订单</a>
+
+							<dl>
+
+								<dd>
+
+									<a href="order.html">我的订单</a>
+
+								</dd>
+
+								<dd>
+
+									<a href="order.html">我的订单</a>
+
+								</dd>
+
+							</dl>
+
+						</li>
+
+						<li><a href="user.html">会员中心</a></li>
+
+						<li><a href="###">企业采购</a></li>
+
+						<li>
+
+							<a href="###">客户服务</a>
+
+							<dl>
+
+								<dd>
+
+									<a href="###">客户服务</a>
+
+								</dd>
+
+								<dd>
+
+									<a href="###">客户服务</a>
+
+								</dd>
+
+							</dl>
+
+						</li>
+
+						<li>
+
+							<a href="###">网站导航</a>
+
+							<dl>
+
+								<dd>
+
+									
+
+									<a href="###">网站导航</a>
+
+								</dd>
+
+								<dd>
+
+									<a href="###">网站导航</a>
+
+								</dd>
+
+							</dl>
+
+	
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div><!--header_top end-->
+
+			<div class="header_content">
+
+				<div class="mg">
+
+					<a href="index.html" class="pic"><img src="__STATIC__/home/img/logo_03.png" alt="图片无法加载"></a>
+
+					<h1>收银台</h1>
+
+					<div class="search pull-right" >
+
+						<input type="text"placeholder="睡衣女">
+
+						<a href="###" class="search_text">搜索</a>
+
+						
+
+					</div>
+
+				</div>
+
+			</div><!--header_content end-->
+
+			<div class="header_bottom">
+
+				<div class="mg">
+
+					<div class="order_detail">
+
+					<p>订单提交成功，请您尽快付款！ 订单号：{$order_num}</p>
+
+					<p>应付金额<strong>{$price | sprintf="%.2f",###}元</strong></p>
+
+					<p>请您在<i>24小时</i>，否则订单会被自动取消（以订单详情页为准）。</p>
+
+					<p><a href="pay.html">订单详情</a><span class="caret"></span></p>
+
+					
+
+				</div>					
+
+				</div>
+
+				
+
+			</div>
+
+		</div><!--header end-->
+
+		<!--content-->
+
+		<div class="content">
+
+			<div class="mg">
+
+				<h1>黄金会员额度未激活，<a href="###">立即激活</a>  享受免息即可消费</h1>
+
+				<div class="pay">
+
+					<label class="c-checkbox">
+
+						<input type="checkbox">
+
+						<span></span>
+
+						<i>银行卡</i>
+
+					</label>
+
+					<p>支付<strong>{$price | sprintf="%.2f",###}元</strong></p>
+
+					<div class="input-group">
+
+		               <input type="text" class="form-control" placeholder="输入银行卡号或简码识别">
+
+		               	<span class="input-group-btn">
+
+		                  	<button class="btn btn-default" type="button">
+
+		                    		确定
+
+		                  	</button>
+
+		               	</span>
+
+		            </div><!-- /input-group -->
+
+		            <div class="pay_way">
+
+		            	<ul>
+
+		            		<li class="on">
+
+		            			   <a href="###">快捷支付</a>
+
+		            		</li>
+
+		            		<li>
+
+		            			<a href="###">网银支付</a>
+
+		            		</li>
+
+		            	</ul>
+
+		            </div>
+
+		            <div class="bank">
+
+		            	<ul>
+
+		            		<li class="active">
+
+		            			<dl>
+
+		            				<dd class="on">
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_01.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_02.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_03.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_04.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_05.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_06.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_07.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_08.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_09.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_10.jpg"></a>
+
+		            				</dd>
+
+		            				<dd>
+
+		            					<a href="###"><img src="__STATIC__/home/img/bank_11.jpg"></a>
+
+		            				</dd>
+
+		            				<dd >
+
+		            					<a href="###">更多银行</a>
+
+		            				</dd>
+
+		            			</dl>
+
+		            		</li>
+
+		            		<li>
+
+		            			网银支付
+
+		            		</li>
+
+		            	</ul>
+
+		            </div>
+
+		            <div class="pay_once">
+
+		            	<a href="###" id="pay">立即支付</a>
+
+		            	<p>请选择银行支付 </p>
+
+		            	<h1>其它支付</h1>
+
+		            	<ul>
+
+		            		<li><a href="###">微信支付</a> </li>
+
+		            		<li><a href="###">中国联盟</a></li>
+
+		            		<li>
+
+		            			<a href="###">扫一扫</a>
+
+		            			<span>首单减10元</span>
+
+		            		</li>
+
+		            	</ul>
+
+		            </div>
+
+				</div>
+
+			</div><!--mg end-->
+
+			<div class="comfir">
+
+				<div class="mg">
+
+					<ul>
+
+						<li>
+
+							<img src="__STATIC__/home/img/com_01.png"> 
+
+							100%正品保证
+
+						</li>
+
+						<li>
+
+							<img src="__STATIC__/home/img/com_02.png"> 
+
+							新人首单免邮
+
+						</li>
+
+						<li>
+
+							<img src="__STATIC__/home/img/com_03.png"> 
+
+							7天无理由退换货
+
+						</li>
+
+						<li>
+
+							<img src="__STATIC__/home/img/com_04.png"> 
+
+							首次退换货免邮
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		</div><!--content end-->
+
+		<!--content end-->
+{include file="public/footer"}
+

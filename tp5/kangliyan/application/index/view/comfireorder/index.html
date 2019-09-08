@@ -1,0 +1,647 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>确认订单页</title>
+
+    <link rel="stylesheet" href="__STATIC__/home/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/comon.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/style.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/comfirm_order.css"/>
+
+    <script type="text/javascript" src="__STATIC__/home/js/jquery-1.11.0.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/comfirm_order.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/quit.js" ></script>
+
+</head>
+
+<body>
+
+<!--header-->
+
+<div class="header">
+
+    <div class="header-top">
+
+        <div class="mg">
+
+            <h1 class="pull-left"><a href="index.html">欢迎来到康丽妍!</a></h1>
+
+            <a href="login.html" class="login pull-left"><i>请登录</i>&nbsp; <span>|</span></a>
+
+            <a href="register.html" class=" regist"> &nbsp; 免费注册</a>
+
+            <a href="login.html" class="quit"><span>|</span> 安全退出</a>
+
+            <ul class="  pull-right">
+
+                <li>
+
+                    <a href="order.html">我的订单</a>
+
+                    <dl>
+
+                        <dd>
+
+                            <a href="order.html">我的订单</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="order.html">我的订单</a>
+
+                        </dd>
+
+                    </dl>
+
+                </li>
+
+                <li><a href="user.html">会员中心</a></li>
+
+                <li><a href="###">企业采购</a></li>
+
+                <li>
+
+                    <a href="###">客户服务</a>
+
+                    <dl>
+
+                        <dd>
+
+                            <a href="###">客户服务</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="###">客户服务</a>
+
+                        </dd>
+
+                    </dl>
+
+                </li>
+
+                <li>
+
+                    <a href="###">网站导航</a>
+
+                    <dl>
+
+                        <dd>
+
+
+
+                            <a href="###">网站导航</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="###">网站导航</a>
+
+                        </dd>
+
+                    </dl>
+
+
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div><!--header_top end-->
+
+    <div class="header_content">
+
+        <div class="mg">
+
+            <a href="index.html" class="pic"><img src="__STATIC__/home/img/logo_03.png" alt="图片无法加载"></a>
+
+            <h1>结算页</h1>
+
+            <div class="search pull-right" >
+
+                <input type="text"placeholder="睡衣女">
+
+                <a href="###" class="search_text">搜索</a>
+
+
+
+            </div>
+
+        </div>
+
+    </div><!--header_content end-->
+
+</div><!--header end-->
+
+<div class="content">
+
+    <div class="mg">
+
+        <h1>
+
+            填写并核对商品信息
+
+        </h1>
+        {foreach name="addr" item="vo"}
+        <div class="peo_mess">
+
+            <h2>
+
+                收货人信息
+
+                <a href="address.html">新增收货地址</a>
+                <a href="#">更改收货地址</a>
+
+            </h2>
+            <p>公司
+                <img src="__STATIC__/home/img/comfirm_01.png">
+            </p>
+
+            <p>
+            <input type="checkbox" class="checkid" value="{$vo.id}" id="addid">
+            收件人：<span>{$vo.address_name}</span><br>
+            收件人电话：<span>{$vo.address_mobile}</span><br>
+            地址：<span>{$vo.address}</span><br>
+            邮编：<span>{$vo.zip_code}</span></p>
+
+            <p class="line"></p>
+
+        </div><!--peo_mess end-->
+        {/foreach}
+
+        <div class="pay_way">
+
+            <h2>
+
+                支付方式
+
+            </h2>
+
+            <ul>
+
+                <li class="on">
+
+                    <a href="###">
+
+                        在线支付
+
+                    </a>
+
+                    <img src="__STATIC__/home/img/comfirm_01.png">
+
+                </li>
+
+                <li>
+
+                    <a href="###">
+
+                        货到付款
+
+                    </a>
+
+                    <img src="__STATIC__/home/img/comfirm_01.png">
+
+                </li>
+
+                <li>
+
+                    <a href="###">更多≥</a>
+
+            </ul>
+
+            <p class="line"></p>
+
+        </div><!--pay_way-->
+
+        <div class="send">
+
+            <h2>
+
+                送货清单
+
+                <a href="{:url('Shopcart/index')}">返回修改购物车</a>
+
+            </h2>
+
+            <ul class="goods_det">
+            {foreach name="res" item="vo"}
+                <li>
+
+                    <div class="left">
+
+                        <h1>
+
+                            配送方式
+
+                        </h1>
+
+                        <p>快递运输
+
+                            <img src="__STATIC__/home/img/comfirm_01.png">
+
+                        </p>
+
+                        <p>免运费</p>
+
+                    </div>
+    
+                    <div class="right">
+
+                        <dl>
+
+                            <dd>
+
+                                <h1>康丽妍商城</h1>
+                                <input type="hidden" value="{$vo.id}" class="ids">
+                                <a href="pro_details.html"><img src="{$vo.pro_color}" width="83" height="81"></a></a>
+
+                                <h2>
+                                    <a href="pro_details.html">{$vo.pro_name}</a>
+
+                                </h2>
+
+                                <p>{$vo.pro_size}</p>
+
+                                <p><a href="###">7天无理由退货</a></p>
+
+                            </dd>
+
+                            <dd>
+
+                                {$vo.pro_price |sprintf="%.2f",###}
+
+                            </dd>
+
+                            <dd>
+
+                                {$vo.pro_num}
+
+                            </dd>
+
+                            <dd>
+
+                                有货
+
+                            </dd>
+
+                        </dl>
+
+                    </div>
+
+                </li><!--goods_det-->
+                {/foreach}
+            </ul>
+
+            <label>
+
+
+
+                <span>添加备注</span>
+
+                <input type="text" placeholder="限60字以内">
+
+            </label>
+
+            <p class="line"></p>
+
+            <dl>
+
+                <dt>发票信息</dt>
+
+                <dd>不开发票</dd>
+
+                <dd>个人</dd>
+
+                <dd>明细</dd>
+
+                <dd>
+
+                    <a href="###">修改</a>
+
+                </dd>
+
+            </dl>
+
+            <p class="line"></p>
+
+            <ul class="total">
+
+                <li>
+
+                    <i>{$num}</i> 件商品，总商品金额：<span id="price_post">{$total |sprintf="%.2f",###}</span>
+
+                </li>
+
+                <li>
+
+                    运费：<span> ￥0.00</span>
+
+                </li>
+
+                <li>
+
+                    服务费：<span>￥0.00</span>
+
+                </li>
+
+                <li>
+
+                    退换无忧：<span>￥0.00</span>
+
+                </li>
+
+            </ul>
+
+            <p class="money">
+
+                应付总额 :<span>￥{$total |sprintf="%.2f",###}</span>
+
+            </p>
+
+            <p class="address">
+                收货人：<span>{$addr[0]['address_name']}</span>
+                电话：<span>{$addr[0]['address_mobile']}</span>
+                寄送至：<span>{$addr[0]['address']}</span>
+                
+            </p>
+
+            <a href="javascript:;" class="sub" onclick="payAjax()">提交订单</a>
+
+        </div>
+
+        <div class="pro">
+
+            <div class="swich_top">
+
+                <ul>
+
+                    <li class="on"><a href="###">猜你喜欢</a></li>
+
+                    <li><a href="###">我的关注</a></li>
+
+                    <li><a href="###">最近浏览的</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="swich_con">
+
+
+
+                <ul>
+
+                    <li class="on">
+
+                        <dl>
+
+                            <dd>
+
+                                <a href="pro_details.html"><img src="__STATIC__/home/img/pay_s_01_03.jpg"></a>
+
+                                <h1>
+
+                                    <a href="pro_details.html">卡托古依 2016春秋季韩版长袖睡
+
+                                        衣女套装秋季款卡通宽松加大码牛</a>
+
+                                </h1>
+
+                                <p>￥ 79.00</p>
+
+                                <a class="shop_car" href="shop_cart.html">
+
+                                    加入购物车
+
+                                </a>
+
+                            </dd>
+
+                            <dd>
+
+                                <a href="pro_details.html"><img src="__STATIC__/home/img/pay_s_02_03.jpg"></a>
+
+                                <h1>
+
+                                    <a href="pro_details.html">卡托古依 2016春秋季韩版长袖睡
+
+                                        衣女套装秋季款卡通宽松加大码牛</a>
+
+                                </h1>
+
+                                <p>￥ 79.00</p>
+
+                                <a class="shop_car" href="shop_cart.html">
+
+                                    加入购物车
+
+                                </a>
+
+                            </dd>
+
+                            <dd>
+
+                                <a href="pro_details.html"><img src="__STATIC__/home/img/pay_s_03_03.jpg"></a>
+
+                                <h1>
+
+                                    <a href="pro_details.html">卡托古依 2016春秋季韩版长袖睡
+
+                                        衣女套装秋季款卡通宽松加大码牛</a>
+
+                                </h1>
+
+                                <p>￥ 79.00</p>
+
+                                <a class="shop_car" href="shop_cart.html">
+
+                                    加入购物车
+
+                                </a>
+
+                            </dd>
+
+                            <dd>
+
+                                <a href="pro_details.html"><img src="__STATIC__/home/img/pay_s_04_03.jpg"></a>
+
+                                <h1>
+
+                                    <a href="pro_details.html">卡托古依 2016春秋季韩版长袖睡
+
+                                        衣女套装秋季款卡通宽松加大码牛</a>
+
+                                </h1>
+
+                                <p>￥ 79.00</p>
+
+                                <a class="shop_car" href="shop_cart.html">
+
+                                    加入购物车
+
+                                </a>
+
+                            </dd>
+
+                            <dd>
+
+                                <a href="pro_details.html"><img src="__STATIC__/home/img/pay_s_05_03.jpg"></a>
+
+                                <h1>
+
+                                    <a href="pro_details.html">卡托古依 2016春秋季韩版长袖睡
+
+                                        衣女套装秋季款卡通宽松加大码牛</a>
+
+                                </h1>
+
+                                <p>￥ 79.00</p>
+
+                                <a class="shop_car" href="shop_cart.html">
+
+                                    加入购物车
+
+                                </a>
+
+                            </dd>
+
+                            <dd>
+
+                                <a href="pro_details.html"><img src="__STATIC__/home/img/pay_s_05_03.jpg"></a>
+
+                                <h1>
+
+                                    <a href="pro_details.html">卡托古依 2016春秋季韩版长袖睡
+
+                                        衣女套装秋季款卡通宽松加大码牛</a>
+
+                                </h1>
+
+                                <p>￥ 79.00</p>
+
+                                <a class="shop_car" href="shop_cart.html">
+
+                                    加入购物车
+
+                                </a>
+
+                            </dd>
+
+                        </dl>
+
+                        <a href="###" class="pre" id="pre"></a>
+
+                        <a href="###" class="next" id="next"></a>
+
+                    </li>
+
+                    <li>
+
+                        我的关注
+
+                    </li>
+
+                    <li>
+
+                        最近浏览的
+
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+        </div><!--pro end-->
+
+    </div><!--mg end-->
+
+    <div class="comfir">
+
+        <div class="mg">
+
+            <ul>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_01.png">
+
+                    100%正品保证
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_02.png">
+
+                    新人首单免邮
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_03.png">
+
+                    7天无理由退换货
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_04.png">
+
+                    首次退换货免邮
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div><!--content end-->
+<!-- jQuery(".peo_mess input[type=checkbox]:checked") -->
+<script>
+    function payAjax(){
+        if(!($(".checkid").get(0).checked)){
+            alert('请选择地址');
+            exit;
+        }
+        var addr_id = $('.checkid:checked').val()
+        var ids = $('.ids').map(function () {
+            return jQuery(this).val();
+        }).get().join(',');
+        var data = {
+            'addr_id':addr_id,
+            'ids':ids,
+        }
+        var url = "{:url('Pay/addPost')}";
+        var success =function(data){
+            window.location.href="{:url('Pay/index')}";
+        }
+        console.log(data)
+        $.post(url,data,success,'json');
+    }
+</script>
+{include file="public/footer"}
+

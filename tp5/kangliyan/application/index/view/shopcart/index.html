@@ -1,0 +1,661 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>购物车</title>
+
+        <link rel="stylesheet" href="__STATIC__/home/css/bootstrap.css" />
+
+        <link rel="stylesheet" href="__STATIC__/home/css/comon.css" />
+
+        <link rel="stylesheet" href="__STATIC__/home/css/style.css" />
+
+        <link rel="stylesheet" href="__STATIC__/home/css/shopcart.css"/>
+
+        <script type="text/javascript" src="__STATIC__/home/js/jquery-1.11.0.js" ></script>
+
+        <script type="text/javascript" src="__STATIC__/home/js/comfirm_order.js" ></script>
+
+        <script type="text/javascript" src="__STATIC__/home/js/angular.min.js" ></script>
+
+        <script type="text/javascript" src="__STATIC__/home/js/shop_cart.js" ></script>
+
+        <script type="text/javascript" src="__STATIC__/home/js/quit.js" ></script>
+
+    </head>
+
+    <body ng-app="shopCar">
+
+        <!--header-->
+
+        <div class="header">
+
+            <div class="header-top">
+
+                <div class="mg">
+
+                    <h1 class="pull-left"><a href="index.html">欢迎来到康丽妍!</a></h1>
+
+                    <a href="{:url('Login/index')}" class="login pull-left" id="login"><i>请登录</i> <span>|</span></a>
+
+                    <a href="{:url('Register/index')}" class=" regist"> 免费注册</a>
+
+                    <a href="{:url('Login/index')}" class="quit"><span>|</span> 安全退出</a>
+
+                    <ul class="  pull-right">
+
+                        <li>
+
+                            <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                            <dl>
+
+                                <dd>
+
+                                    <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                                </dd>
+
+                                <dd>
+
+                                    <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                                </dd>
+
+                            </dl>
+
+                        </li>
+
+                        <li><a href="{:url('User/index')}">会员中心</a></li>
+
+                        <li><a href="###">企业采购</a></li>
+
+                        <li>
+
+                            <a href="###">客户服务</a>
+
+                            <dl>
+
+                                <dd>
+
+                                    <a href="###">客户服务</a>
+
+                                </dd>
+
+                                <dd>
+
+                                    <a href="###">客户服务</a>
+
+                                </dd>
+
+                            </dl>
+
+                        </li>
+
+                        <li>
+
+                            <a href="###">网站导航</a>
+
+                            <dl>
+
+                                <dd>
+
+                                    
+
+                                    <a href="###">网站导航</a>
+
+                                </dd>
+
+                                <dd>
+
+                                    <a href="###">网站导航</a>
+
+                                </dd>
+
+                            </dl>
+
+    
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div><!--header_top end-->
+
+            <div class="header_content">
+
+                <div class="mg">
+
+                    <a href="index.html" class="pic"><img src="__STATIC__/home/img/logo_03.png" alt="图片无法加载"></a>
+
+                    <h1>
+
+                        <a href="{:url('Shopcart/index')}">购物车</a>
+
+                    </h1>
+
+                    <div class="search pull-right" >
+
+                        <input type="text"placeholder="睡衣女">
+
+                        <a href="###" class="search_text">搜索</a>
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div><!--header_content end-->
+
+        </div><!--header end-->
+
+        <div class="content">
+
+            <div class="mg">
+
+                <div class="shop_cart">
+
+                    <h1>
+
+                        全部商品 <i>{$all}</i>
+
+                    </h1>
+
+                    <div class="address">
+
+                        <p class="send"><i>广州市天河区</i><span class="glyphicon glyphicon-menu-down"></span></p>
+
+                        <ul class="memu" id="memu">
+
+                            <li>广州市白云区</li>
+
+                            <li>广州市黄埔区</li>
+
+                            <li>广州市海珠区</li>
+
+                            <li>广州市天河区</li>
+
+                        </ul>
+
+                        <p class="text">
+
+                            配送至:
+
+                        </p>
+
+                    </div>
+
+                    <table ng-controller = "shopController">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+
+                                    <label class="c-checkbox" all>
+
+                                        <input type="checkbox">
+
+                                        <span></span>
+
+                                        <i>全选</i>
+
+                                    </label>
+
+                                </th>
+
+                                <th colspan="2">
+
+                                    商品
+
+                                </th>
+
+                                <th>
+
+                                    单价（元）
+
+                                </th>
+
+                                <th>
+
+                                    数量
+
+                                </th>
+
+                                <th>
+
+                                    小计（元）
+
+                                </th>
+
+                                <th >
+
+                                    操作
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr class="activitly">
+
+                                <td colspan="7">
+
+                                    <div class="top">
+
+                                        <label class="c-checkbox" all>
+
+                                            <input type="checkbox">
+
+                                            <span></span>
+
+                                            <i>康丽妍商城</i>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="bottom">
+
+                                        <h2>满减<span></span></h2>
+
+                                        <p>活动商品已购满280.00元（<i>已减80.00</i>）  <a href="###">去凑单≥</a></p>
+
+                                        <p class="mon"></p>
+
+                                        <p class="free">减： 80.00</p>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                            <!-- <tr class="goods" ng-repeat=" item in MyProlist" >
+
+                                <td class="main">
+
+                                    <label class="c-checkbox" >
+
+                                            <input type="checkbox" name="del">
+
+                                            <span></span>
+
+                                    </label>
+
+                                    <a href="{:url('Prodetails/index')}"><img ng-src="{{item.image}}"></a>
+
+                                    <p class="line"></p>
+
+                                </td>
+
+                                <td>
+
+
+
+                                    <p><a href="{:url('Prodetails/index')}" ng-bind="item.tittle"></a></p>
+
+                                </td>
+
+                                <td>
+
+                                    <p>颜色：爱家款</p>
+
+                                    <p>尺码：{{item.size}}</p>
+
+                                </td>
+
+                                <td >
+
+                                    {{item.price}}
+
+                                </td>
+
+                                <td>
+
+                                    <span class="sub" id="sub" ng-click="sub($index)">-</span><input type="text" class="prd_num" ng-model ="inputVal[$index]"><span class="add" id="add" ng-click = "add($index)">+</span>
+
+                                    <p>有货</p>
+
+                                </td>
+
+                                <td class="min_total">
+
+                                    {{item.totall}}.00
+
+                                </td>
+
+                                <td>
+
+                                    <a href="###" class="delete">删除</a>
+
+                                    <a href="###" class="collec">移到我的关注</a>
+
+                                </td>
+
+                            </tr> -->
+                            {foreach name="res" item="vo"}
+                            <tr class="goods" >
+                                <td class="main">
+
+                                    <label class="c-checkbox" >
+
+                                            <input type="checkbox" name="del" value="{$vo.id}">
+
+                                            <span></span>
+
+                                    </label>
+
+                                    <a href="{:url('Prodetails/index')}"><img src="{$vo.pro_color}"></a>
+
+                                    <p class="line"></p>
+
+                                </td>
+
+                                <td>
+                                    <p><a href="{:url('Prodetails/index')}">{$vo.pro_name}</a></p>
+
+                                </td>
+
+                                <td>
+
+                                    <p>颜色：爱家款</p>
+
+                                    <p>尺码：{$vo.pro_size}</p>
+
+                                </td>
+
+                                <td >
+
+                                    {$vo.pro_price |sprintf="%.2f",###}
+
+                                </td>
+
+                                <td>
+
+                                    <span class="sub" id="sub" ng-click="sub($index)">-</span><input type="text" class="prd_num" value="{$vo.pro_num}"><span class="add" id="add" ng-click = "add($index)">+</span>
+
+                                    <p>有货</p>
+
+                                </td>
+
+                                <td class="min_total">
+
+                                    {$vo['pro_price']*$vo['pro_num']|sprintf="%.2f",###}
+
+                                </td>
+
+                                <td>
+
+                                    <a href="###" class="delete">删除</a>
+
+                                    <a href="###" class="collec">移到我的关注</a>
+
+                                </td>
+
+                            </tr>
+                            {/foreach}
+                            <tr class="account">
+
+                                <td colspan="7">
+
+                                    <div class="acc_det">
+
+                                        <label class="c-checkbox all">
+
+                                            <input type="checkbox">
+
+                                            <span></span>
+
+                                            <i>全选</i>
+
+                                        </label>
+
+                                        <p class="delete">删除选中的商品 </p>
+
+                                        <p class="collect"><a href="###">移到我的关注   </a></p>
+
+                                        <a href="javascript:;" class="pay" onclick="subAjax()">去结算</a>
+
+                                        <p class="totall">总价：<i>￥0.00</i> <span>已节省：-<strong>￥0.00</strong></span></p>
+
+                                        <p class="chose">已选择  <i>0</i>  件商品  <span class="glyphicon glyphicon-menu-up" ></span></p>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>    
+
+                    <div class="pro">
+
+                    <div class="swich_top">
+
+                        <ul>
+
+                            <li class="on"><a href="###">猜你喜欢</a></li>
+
+                            <li><a href="###">我的关注</a></li>
+
+                            <li><a href="###">最近浏览的</a></li>
+
+                        </ul>   
+
+                    </div>
+
+                    <div class="swich_con">
+
+                        
+
+                            <ul>
+
+                                <li class="on">
+
+                                    <dl>
+
+                                        <dd>
+
+                                            <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/pay_s_01_03.jpg"></a>
+
+                                            <h1>
+
+                                                <a href="{:url('Prodetails/index')}">卡托古依 2016春秋季韩版长袖睡
+
+                                                    衣女套装秋季款卡通宽松加大码牛</a>
+
+                                            </h1>
+
+                                            <p>￥ 79.00</p>
+
+                                            <a class="shop_car" href="{:url('Shopcart/index')}">
+
+                                                加入购物车
+
+                                            </a>
+
+                                        </dd>
+
+                                        <dd>
+
+                                            <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/pay_s_02_03.jpg"></a>
+
+                                            <h1>
+
+                                            <a href="{:url('Prodetails/index')}">卡托古依 2016春秋季韩版长袖睡
+
+                                            衣女套装秋季款卡通宽松加大码牛</a>
+
+                                            </h1>
+
+                                            <p>￥ 79.00</p>
+
+                                            <a class="shop_car" href="{:url('Shopcart/index')}"> 
+
+                                                加入购物车
+
+                                            </a>
+
+                                        </dd>
+
+                                        <dd>
+
+                                            <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/pay_s_03_03.jpg"></a>
+
+                                            <h1>
+
+                                                <a href="{:url('Prodetails/index')}">卡托古依 2016春秋季韩版长袖睡
+
+                                                    衣女套装秋季款卡通宽松加大码牛</a>
+
+                                            </h1>
+
+                                            <p>￥ 79.00</p>
+
+                                            <a class="shop_car" href="{:url('Shopcart/index')}">
+
+                                                加入购物车
+
+                                            </a>
+
+                                        </dd>
+
+                                        <dd>
+
+                                            <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/pay_s_04_03.jpg"></a>
+
+                                            <h1>
+
+                                                <a href="{:url('Prodetails/index')}">卡托古依 2016春秋季韩版长袖睡
+
+                                                    衣女套装秋季款卡通宽松加大码牛</a>
+
+                                            </h1>
+
+                                            <p>￥ 79.00</p>
+
+                                            <a class="shop_car" href="{:url('Shopcart/index')}">
+
+                                                加入购物车
+
+                                            </a>
+
+                                        </dd>
+
+                                        <dd>
+
+                                            <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/pay_s_05_03.jpg"></a>
+
+                                            <h1>
+
+                                                <a href="{:url('Prodetails/index')}">卡托古依 2016春秋季韩版长袖睡
+
+                                                    衣女套装秋季款卡通宽松加大码牛</a>
+
+                                            </h1>
+
+                                            <p>￥ 79.00</p>
+
+                                            <a class="shop_car" href="{:url('Shopcart/index')}">
+
+                                                加入购物车
+
+                                            </a>
+
+                                        </dd>
+
+                                        <dd>
+
+                                            <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/pay_s_05_03.jpg"></a>
+
+                                            <h1>
+
+                                                <a href="{:url('Prodetails/index')}">卡托古依 2016春秋季韩版长袖睡
+
+                                                    衣女套装秋季款卡通宽松加大码牛</a>
+
+                                            </h1>
+
+                                            <p>￥ 79.00</p>
+
+                                            <a class="shop_car" href="{:url('Shopcart/index')}">
+
+                                                加入购物车
+
+                                            </a>
+
+                                        </dd>
+
+                                    </dl>
+
+                                    <a href="###" class="pre" id="pre"></a>
+
+                                    <a href="###" class="next" id="next"></a>
+
+                                </li>
+
+                                <li>
+
+                                    我的关注
+
+                                </li>
+
+                                <li>
+
+                                    最近浏览的
+
+                                </li>
+
+                            </ul>
+                    </div>
+                </div><!--shop_cart end-->
+            </div><!--mg end-->     
+        </div><!--content end-->
+{include file="public/footer"}
+<script>
+
+    function subAjax(){
+        var selectList = jQuery("table tbody tr.goods .c-checkbox input[type=checkbox]:checked").map(function () {
+            return jQuery(this).val();
+        }).get().join(',');
+        // alert(selectList);
+
+        var data_list = {
+            'ids':selectList,
+        }
+        // console.log(data_list)
+        // alert(data_list);
+        var url ="{:url('Comfireorder/addPost')}";
+        // alert(url);
+        var success =function(data){
+            window.location.href="{:url('Comfireorder/index')}";
+        }
+        
+        $.post(url,data_list,success,'json');
+        
+        
+    }
+
+</script>
+
+

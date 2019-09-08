@@ -1,0 +1,1306 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>会员中心</title>
+
+    <link rel="stylesheet" href="__STATIC__/home/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/comon.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/style.css" />
+
+    <link rel="stylesheet" href="__STATIC__/home/css/user.css" />
+
+    <script type="text/javascript" src="__STATIC__/home/js/jquery-1.11.0.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/float_bar.js"></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/angular.min.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/pro_details.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/quit.js" ></script>
+
+    <script type="text/javascript" src="__STATIC__/home/js/swich.js" ></script>
+
+</head>
+
+<body>
+
+<div class="bar_flo">
+
+    <ul>
+
+        <li>
+
+            <a href="###"><img src="__STATIC__/home/img/bar_01.png"></a>
+
+        </li>
+
+        <li>
+
+            <a href="{:url('Shopcart/index')}">购物车</a>
+
+        </li>
+
+        <li>
+
+            <dl>
+
+                <dd><a href="###"><img src="__STATIC__/home/img/bar_03.png"></a></dd>
+
+                <dd><a href="###"><img src="__STATIC__/home/img/bar_04.png"></a></dd>
+
+                <dd><a href="###"><img src="__STATIC__/home/img/bar_05.png"></a></dd>
+
+                <dd><a href="###"><img src="__STATIC__/home/img/bar_06.png"></a></dd>
+
+            </dl>
+
+        </li>
+
+        <li>
+
+            <a href="###"><img src="__STATIC__/home/img/bar_07.png"></a>
+
+        </li>
+
+        <li>
+
+            <a href="###" id="f_returnTop"><i></i>TOP</a>
+
+        </li>
+
+    </ul>
+
+
+
+</div>
+
+<!--header-->
+
+<div class="header">
+
+    <div class="header-top">
+
+        <div class="mg">
+
+            <h1 class="pull-left"><a href="{:url('Index/index')}">欢迎来到康丽妍!</a></h1>
+
+            <a href="{:url('Login/index')}" class="login pull-left" id="login"><i>请登录</i> <span>|</span></a>
+
+            <a href="{:url('Register/index')}" class=" regist"> 免费注册</a>
+
+            <a href="{:url('Login/index')}" class="quit"><span>|</span> 安全退出</a>
+
+            <ul class="  pull-right">
+
+                <li>
+
+                    <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                    <dl>
+
+                        <dd>
+
+                            <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="{:url('Comfireorder/order')}">我的订单</a>
+
+                        </dd>
+
+                    </dl>
+
+                </li>
+
+                <li><a href="{:url('User/index')}">会员中心</a></li>
+
+                <li><a href="###">企业采购</a></li>
+
+                <li>
+
+                    <a href="###">客户服务</a>
+
+                    <dl>
+
+                        <dd>
+
+                            <a href="###">客户服务</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="###">客户服务</a>
+
+                        </dd>
+
+                    </dl>
+
+                </li>
+
+                <li>
+
+                    <a href="###">网站导航</a>
+
+                    <dl>
+
+                        <dd>
+
+
+
+                            <a href="###">网站导航</a>
+
+                        </dd>
+
+                        <dd>
+
+                            <a href="###">网站导航</a>
+
+                        </dd>
+
+                    </dl>
+
+
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div><!--header_top end-->
+
+    <div class="mg">
+
+        <div class="header_content">
+
+            <div class="logo">
+
+                <a href="{:url('Index/index')}"><img src="__STATIC__/home/img/logo_03.png"></a>
+
+            </div>
+
+            <div class="search">
+
+                <input type="text"placeholder="输入商品关键词搜索">
+
+                <a href="{:url('Index/index')}" class="search_text">搜索</a>
+
+                <ul>
+
+                    <li><a href="{:url('Shoplist/index')}">男士家居服</a></li>
+
+                    <li><a href="{:url('Shoplist/index')}">儿童家居服</a></li>
+
+                    <li><a href="{:url('Shoplist/index')}">休闲家居服</a></li>
+
+                    <li><a href="{:url('Shoplist/index')}">运动家居服</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="shop_car pull-left">
+
+                <a href="{:url('Shopcart/index')}">
+
+                    购物车
+
+                    <span class="badge ">0</span>
+
+                </a>
+
+
+
+            </div>
+
+        </div>
+
+    </div><!--mg end-->
+
+    <div class="nav">
+
+        <ul>
+
+            <li class="on"><a href="{:url('Index/index')}" class="active">首页</a></li>
+
+            <li >
+
+                <a href="{:url('Index/index')}" class="active">账户设置 <span class="glyphicon glyphicon-menu-down"></span></a>
+
+                <dl>
+
+                    <dd><a href="###">账户设置</a></dd>
+
+                    <dd><a href="###">账户设置</a></dd>
+
+                </dl>
+
+            </li>
+
+            <li ><a href="{:url('Index/index')}" class="active">社区<span class="glyphicon glyphicon-menu-down"></span></a>
+
+                <dl>
+
+                    <dd><a href="###">社区</a></dd>
+
+                    <dd><a href="###">社区</a></dd>
+
+                </dl>
+
+            </li>
+
+            <li><a href="{:url('Index/index')}" class="active">消息</a></li>
+
+        </ul>
+
+    </div><!--nav end-->
+
+</div><!--hearer end-->
+
+<div class="content">
+
+    <div class="mg">
+
+        <div class="left">
+
+            <h1>订单中心</h1>
+
+            <ul>
+
+                <li><a href="{:url('Comfireorder/order')}">我的订单</a></li>
+
+                <li><a href="###">团购订单</a></li>
+
+                <li><a href="###">我的预售</a></li>
+
+                <li><a href="###">评价晒单</a></li>
+
+                <li><a href="###">取消订单记录</a></li>
+
+            </ul>
+
+            <h1>关注中心</h1>
+
+            <ul>
+
+                <li><a href="###">关注的商品</a></li>
+
+                <li><a href="###">关注的专辑</a></li>
+
+                <li><a href="###">关注的品牌</a></li>
+
+                <li><a href="###">关注的活动</a></li>
+
+                <li><a href="###">浏览历史</a></li>
+
+            </ul>
+
+            <h1>资产中心</h1>
+
+            <ul>
+
+                <li><a href="###">小金库</a></li>
+
+                <li><a href="###">余额</a></li>
+
+                <li><a href="###">优惠卷</a></li>
+
+            </ul>
+
+            <h1>特色业务</h1>
+
+            <ul>
+
+                <li><a href="###">我的预约</a></li>
+
+                <li><a href="###">我的回收单</a></li>
+
+                <li><a href="###">我的常购清单</a></li>
+
+            </ul>
+
+            <h1>客户服务</h1>
+
+            <ul>
+
+                <li><a href="###">返修退换货</a></li>
+
+                <li><a href="###">意见建议</a></li>
+
+                <li><a href="###">购买咨询</a></li>
+
+                <li><a href="###">交易纠纷</a></li>
+
+                <li><a href="###">我的发票</a></li>
+
+                <li><a href="###">举报中心</a></li>
+
+            </ul>
+
+            <h1>设置</h1>
+
+            <ul>
+
+                <li><a href="{:url('Address/index')}">个人信息</a></li>
+
+                <li><a href="###">账户安全</a></li>
+
+            </ul>
+
+        </div><!--left end-->
+
+        <div class="right">
+
+            <div class="right_top">
+
+                <div class="top_left">
+
+                    <ul class="peo">
+
+                        <li>
+
+                            <img src="__STATIC__/home/img/user_01.png" class="head_img">
+
+                            <h1>
+
+                                咸蛋超人  （130026005）<br />
+
+                                <span><img src="__STATIC__/home/img/user_02.png"></span>
+
+                                <span><img src="__STATIC__/home/img/user_02.png"></span>
+
+                                <span><img src="__STATIC__/home/img/user_02.png"></span>
+
+                                <span><img src="__STATIC__/home/img/user_03.png"></span>
+
+                            </h1>
+
+
+
+                        </li>
+
+                        <li>
+
+                            <a href="{:url('Address/index')}">我的收货地址</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="###">我的优惠信息 <span class="glyphicon glyphicon-menu-down"></a>
+
+                            <dl>
+
+                                <dd>
+
+                                    <a href="###">优惠</a>
+
+                                </dd>
+
+                                <dd>
+
+                                    <a href="###">优惠</a>
+
+                                </dd>
+
+                                <dd>
+
+                                    <a href="###">优惠</a>
+
+                                </dd>
+
+                            </dl>
+
+                        </li>
+
+                        <li>
+
+                            <a href="###">我的信用卡 <span class="glyphicon glyphicon-menu-down"></a>
+
+                            <dl>
+
+                                <dd><a href="###">信用卡</a></dd>
+
+                                <dd><a href="###">信用卡</a></dd>
+
+                                <dd><a href="###">信用卡</a></dd>
+
+                            </dl>
+
+                        </li>
+
+                    </ul>
+
+                    <ul class="red">
+
+                        <li>
+
+                            <a href="###">待付款</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="###">待发货</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="###">待收货</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="###">待评价<i>2</i></a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="###">退款</a>
+
+                        </li>
+
+                    </ul>
+
+                </div><!--top_left end-->
+
+                <div class="top_right">
+
+                    <img src="__STATIC__/home/img/user_04_03.png">
+
+                    <p>你是康丽妍优质会员，尊享&nbsp;<strong>2000 元</strong>&nbsp;极速退款 <a href="###">详情≥</a></p>
+
+                </div><!--top_right end-->
+
+            </div><!--top end-->
+
+            <div class="pro_list">
+
+                <h1>
+
+                    根据浏览，猜我喜欢
+
+                    <a href="###"><i><img src="__STATIC__/home/img/refresh.png"></i>换一组</a>
+
+                </h1>
+
+                <ul class="swich">
+
+                    <li class="on">
+
+                        <ol class="show">
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p1.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p4.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p1.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p4.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p1.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p4.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                        </ol>
+
+                    </li>
+
+                    <li>
+
+                        <ol class="show">
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p1.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p4.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p1.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p4.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                        </ol>
+
+                    </li>
+
+                    <li>
+
+                        <ol class="show">
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p1.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p2.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p3.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                            <li>
+
+
+
+                                <a href="{:url('Prodetails/index')}"><img src="__STATIC__/home/img/user_p4.jpg"></a>
+
+                                <p>￥129.00</p>
+
+                                <h2><a href="{:url('Prodetails/index')}">依迪婷<i>睡衣女</i>秋长袖卡通可爱加大码棉居服</a></h2>
+
+                                <p>套装 卡通熊 女L(165/95)</p>
+
+                                <p>已有<strong>1400+</strong>人评价</p>
+
+                                <a href="###" class="succ_sub">月成交 <span>5891笔</span></a>
+
+                                <img src="__STATIC__/home/img/user_start.jpg" class="start"/>
+
+                            </li>
+
+                        </ol>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div><!--right end-->
+
+    </div><!--mg end-->
+
+    <div class="comfir">
+
+        <div class="mg">
+
+            <ul>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_01.png">
+
+                    100%正品保证
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_02.png">
+
+                    新人首单免邮
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_03.png">
+
+                    7天无理由退换货
+
+                </li>
+
+                <li>
+
+                    <img src="__STATIC__/home/img/com_04.png">
+
+                    首次退换货免邮
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div><!--content end-->
+{include file="public/footer"}
+
